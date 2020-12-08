@@ -13,7 +13,7 @@ namespace JWTExampleWebAPI.Controllers
     public class CustomersController : ControllerBase
     {
         [HttpGet]
-        [Authorize]
+        [Authorize(Roles ="Manager")]
         public IEnumerable<string> Get()
             => new string[] { "John Doe", "Jane Doe" }; 
     }

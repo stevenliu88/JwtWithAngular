@@ -37,6 +37,7 @@ namespace JWTExampleWebAPI.Controllers
                 var claims = new Claim[]
                 {
                     new Claim(JwtRegisteredClaimNames.NameId, user.UserName),
+                    new Claim(ClaimTypes.Role, "Manager"),
                     new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString())
                 };
 
